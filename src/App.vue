@@ -1,26 +1,38 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <top-header title="Note keping"></top-header>
+  <new-note></new-note>
+  <bottom-footer></bottom-footer>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import TopHeader from './components/layouts/TopHeader.vue';
+import BottomFooter from './components/layouts/bottomFooter.vue';
+import NewNote from './components/NewNote.vue';
+
 
 export default {
-  name: "App",
   components: {
-    HelloWorld,
-  },
+    TopHeader,
+    NewNote,
+    BottomFooter,
+
+  }
 };
 </script>
+<style >
+* {
+  box-sizing: border-box;
+}
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+html {
+  font-family: 'Roboto', sans-serif;
+  position:relative; 
+  min-height: 100%;
+}
+
+body {
+  margin:0;
+  padding:0;
+  
 }
 </style>
